@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  height: 100vh;
+}
+
+#container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 56px auto 0px;
+}
+
+#title {
+  text-align: center;
+  padding: 24px;
+}
+
+#title a {
+  color: white;
+  text-decoration: underline;
+}
