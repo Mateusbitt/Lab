@@ -24,3 +24,17 @@ body {
 #title h1 {
   text-decoration: underline;
 }
+
+#list {
+  text-align: center;
+  padding: 24px;
+}
+
+#itemLista {
+  margin: 8px;
+}
+
+#itemLista a {
+  color: white;
+  text-decoration: none;
+}
