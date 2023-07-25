@@ -25,7 +25,7 @@ function renderList(toDoList) {
   } else {
     toDoList.forEach((toDoItem, index) => {
       list += `
-      <div id="itemLista"><a href="pages/${toDoItem.link}/index.html">&#x1F4A5 ${toDoItem.title} &#x1F4A5</a></div>
+      <a href="pages/${toDoItem.link}/index.html"><div id="itemLista">&#x1F4A5 ${toDoItem.title} &#x1F4A5</div></a>
       `
     })
   }

@@ -27,14 +27,25 @@ body {
 
 #list {
   text-align: center;
-  padding: 24px;
+  margin: auto;
+}
+
+#list a {
+  display: block;
+  width: 280px;
+  margin: auto;
+  font-size: large;
+  color: white;
+  text-decoration: none;
 }
 
 #itemLista {
-  margin: 8px;
+  margin: 32px auto;
+  padding: 8px;
+  border-radius: 20px;
+  background: rgba(53, 53, 53, 0.5);
 }
 
-#itemLista a {
-  color: white;
-  text-decoration: none;
+#itemLista:hover {
+  background: rgba(83, 83, 83, 0.8);
 }
