@@ -11,6 +11,54 @@
       <div id="title">
         <h1><a href="../../index.html">Lab On - nullshCoalescing</a></h1>
       </div>
+      <div id="main">
+        <p>
+          Para o JS valores como 0, '', [], false, undefined, null => São
+          considerados Falsy... ou seja não válido quando trazemos para o
+          operador OU => ||.
+        </p>
+        <br />
+        <br />
+        <p>
+          Ai que entra o operador "nullshCoalescingOperator" (??). Ele é mais
+          restritivo, ele vai olhar realmente para valores não significativos,
+          como por exemplo o ZERO (0), ele tem sim um valor mesmo que primitivo.
+        </p>
+        <br />
+        <p>
+          --------------------------------------------------------------------------------------------------------
+        </p>
+        <br />
+        <p id="example">
+          const age = 25 <br /><br />
+          document.getElementById("example").innerHTML = "Sua idade é: " + (age
+          ?? 'Não informado')
+          <br /><br />
+          Sua idade é: 25
+        </p>
+        <br />
+        <p>
+          --------------------------------------------------------------------------------------------------------
+        </p>
+        <p>
+          const age = 0 <br /><br />
+          document.getElementById("example").innerHTML = "Sua idade é: " + (age
+          ?? 'Não informado')
+          <br /><br />
+          Sua idade é: 0
+        </p>
+        <br />
+        <p>
+          --------------------------------------------------------------------------------------------------------
+        </p>
+        <p>
+          const age = null <br /><br />
+          document.getElementById("example").innerHTML = "Sua idade é: " + (age
+          ?? 'Não informado')
+          <br /><br />
+          Sua idade é: Não informado
+        </p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

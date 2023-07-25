@@ -25,3 +25,12 @@ body {
   color: white;
   text-decoration: underline;
 }
+
+#main {
+  text-align: center;
+  border: 1px solid red;
+}
+
+#main p {
+  font-size: 40px;
+}
