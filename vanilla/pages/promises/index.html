@@ -11,6 +11,65 @@
       <div id="title">
         <h1><a href="../../index.html">Lab On - promises</a></h1>
       </div>
+      <div id="main">
+        <h2>Promises</h2>
+        <br />
+        <p>
+          Uma Promise é um objeto que representa o resultado (ou falha) de uma
+          operação assíncrona. Ela pode estar em três estados: pending
+          (pendente), fulfilled (realizada) ou rejected (rejeitada). As Promises
+          são usadas para evitar o "callback hell" (encadeamento excessivo de
+          callbacks) e tornar o código assíncrono mais organizado.
+        </p>
+        <br />
+        <h2>Criando uma Promise</h2>
+        <br />
+        <p>
+          const minhaPromise = new Promise((resolve, reject) => { // Aqui você
+          realiza uma operação assíncrona, por exemplo, uma requisição HTTP //
+          Se a operação for bem-sucedida, chame 'resolve' e passe o resultado //
+          Se ocorrer um erro, chame 'reject' e passe o motivo do erro });
+        </p>
+        <br />
+        <p>
+          Usando a Promise: Para lidar com o resultado de uma Promise, você pode
+          encadear métodos .then() e .catch():
+        </p>
+        <br />
+        <p>
+          Async/Await: O async/await é uma sintaxe que torna o trabalho com
+          Promises ainda mais claro e legível. Ele permite escrever código
+          assíncrono como se fosse síncrono, sem a necessidade de encadear
+          .then() e .catch(). Para usar o async/await, uma função precisa ser
+          marcada com a palavra-chave async. Em resumo, async/await é uma forma
+          de escrever código assíncrono de forma mais "síncrona", o que torna o
+          código mais legível e facilita o tratamento de erros.
+        </p>
+        <br />
+        <p>
+          Exemplo de uso combinado de Async/Await e Promises: function
+          obterDados() { return new Promise((resolve, reject) => { // Simulando
+          uma requisição assíncrona que retorna dados após 2 segundos
+          setTimeout(() => { const dados = { id: 1, nome: "Usuário" }; //
+          Resolvendo a Promise com os dados resolve(dados); // Caso ocorra algum
+          erro, rejeitamos a Promise // reject(new Error("Erro ao obter
+          dados")); }, 2000); }); } async function processarDados() { try { //
+          Espera até que a Promise seja resolvida e recebe o resultado em
+          'dados' const dados = await obterDados(); console.log("Dados
+          obtidos:", dados); } catch (erro) { console.error("Erro ao obter
+          dados:", erro.message); } } processarDados();
+        </p>
+        <br />
+        <p>
+          Neste exemplo, a função processarDados() utiliza o async/await para
+          aguardar a resolução da Promise retornada pela função obterDados().
+          Assim, o resultado da operação assíncrona é capturado na variável
+          dados e podemos tratá-lo de acordo. Esses recursos são muito úteis ao
+          trabalhar com chamadas de API, operações de leitura/gravação de
+          arquivos, manipulação de dados em bancos de dados e outras situações
+          em que operações assíncronas são necessárias.
+        </p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
