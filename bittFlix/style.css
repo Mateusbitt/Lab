@@ -1,0 +1,95 @@
+:root {
+  --color-background: #181a1b;
+  --color-navbar: #021e34;
+  --color-navbarShadow: #011422;
+  --color-navbarFocus: #ffffff33;
+  --color-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-background);
+  height: 100vh;
+}
+
+/* Header */
+
+#headerContainer,
+#navHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 10%;
+}
+
+#headerContainer {
+  background-color: var(--color-navbar);
+  box-shadow: 1px 1px 6px var(--color-navbarShadow);
+  height: 4em; /*Para cada 1 EM temos 16 px. Ex: 3em = 48px, 3.5em = 56px, porque .5 equivale a 8px.*/
+}
+
+#navHeader {
+  gap: 3em;
+  transition: 1s;
+  z-index: 2;
+}
+
+#navHeader a {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+#navHeader a:hover {
+  background-color: var(--color-navbarFocus);
+}
+
+.btnIcon {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+#imgLogo img {
+  padding-top: 2px;
+  width: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .btnIcon {
+    display: block;
+  }
+
+  #navHeader {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    top: 0;
+    background-color: var(--color-navbarShadow);
+    height: 100%;
+    width: 35vw;
+    padding: 1em;
+    animation-duration: 1s;
+    margin-left: -100vw;
+  }
+}
+
+/* Content */
+
+#fullContainer {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
