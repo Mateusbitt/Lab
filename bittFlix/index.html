@@ -52,8 +52,19 @@
         <a class="people" href="#">Pessoas</a>
       </div>
     </div>
-    <div id="fullContainer" onclick="closeSidebar()" tabindex="0">
-      <div id="topContainer">Barra de pesquisa</div>
+    <div id="fullContainer" onclick="closeSidebar()">
+      <div id="topContainer">
+        <h1>Bem-Vindo(a).</h1>
+        <h2>Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.</h2>
+        <div id="searchBar">
+          <input
+            id="searchInput"
+            placeholder="Buscar por um Filme, Série ou Pessoa..."
+            type="text"
+          />
+          <button onclick="funfando()" id="searchButton">Search</button>
+        </div>
+      </div>
       <div id="midContainer">Uma lista de filmes</div>
       <div id="footerContainer">Rodapé</div>
     </div>

@@ -25,3 +25,7 @@ window.addEventListener("resize", function (event) {
     toggleSidebar()
   }
 })
+
+function funfando() {
+  console.log("Sa porra ta on")
+}
