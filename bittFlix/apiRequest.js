@@ -14,11 +14,14 @@ getcontent()
 function showDate(movies) {
   let output = ""
 
-  for (let title of movies.results) {
+  for (let i = 0; i < 5; i++) {
+    let title = movies.results[i]
+
     output += `<div id="filmCard">
-                <p id="titleMovie">${title.original_title}</p>
-                <img id="movieImg" src="https://image.tmdb.org/t/p/w500/${title.backdrop_path}" alt="">
-                <p id="movieDescription">${title.overview}</p>
+                <img id="movieImg" src="https://image.tmdb.org/t/p/w500/${title.poster_path}" alt="">
+                <div id="voteAverage"><p>${title.vote_average}</p></div>
+                <p>${title.original_title}</p>
+                <button>Detalhes</button>
                </div>`
   }
   document.getElementById("midContainer").innerHTML = output
