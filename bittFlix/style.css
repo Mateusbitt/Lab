@@ -25,13 +25,19 @@ body {
 
 /* Header */
 
-#headerContainer,
-#navHeader {
+#headerContainer {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 10%;
+}
+
+#navHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #headerContainer {
@@ -158,6 +164,7 @@ body {
 /* Cartão */
 #filmCard {
   position: relative;
+  max-width: 200px;
 }
 
 #movieImg {
@@ -171,7 +178,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 90px;
+  bottom: 20%;
   margin: 10px;
 
   background-color: var(--color-background);
@@ -186,7 +193,8 @@ body {
   margin: 20px 0;
 }
 
-#filmCard button {
+#filmCard a {
+  text-decoration: none;
   color: var(--color-white);
   background-color: var(--color-buttom-details);
   padding: 5px 10px;
@@ -202,9 +210,8 @@ body {
 #footerContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6rem;
-  padding: 40px 0;
+  justify-content: space-between;
+  padding: 40px 10%;
 
   background-color: var(--color-navbar);
 }
@@ -213,9 +220,19 @@ body {
   width: 14rem;
 }
 
+#footerDetail {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 60px;
+}
 #basics, #community, #legality{
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+#basics a, #community a, #legality a{
+  text-decoration: none;
+  color: var(--color-white);
 }

@@ -3,6 +3,12 @@ var navigationHeader = document.getElementById("navHeader")
 var container = document.getElementById("fullContainer")
 var showSidebar = false
 
+window.addEventListener("resize", function (event) {
+  if (window.innerWidth > 768 && showSidebar) {
+    toggleSidebar()
+  }
+})
+
 function toggleSidebar() {
   showSidebar = !showSidebar
   if (showSidebar) {
@@ -19,12 +25,6 @@ function closeSidebar() {
     toggleSidebar()
   }
 }
-
-window.addEventListener("resize", function (event) {
-  if (window.innerWidth > 768 && showSidebar) {
-    toggleSidebar()
-  }
-})
 
 function funfando() {
   console.log("Sa porra ta on")
