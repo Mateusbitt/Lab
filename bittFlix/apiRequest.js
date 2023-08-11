@@ -1,6 +1,6 @@
-import { showMovie, showTv } from "./src/script.js"
+import { showMovie, showTopRated } from "./src/script.js"
 
-async function getcontent() {
+async function getPopularMovie() {
   try {
     const response = await fetch("http://localhost:4567/popular")
     const data = await response.json()
@@ -11,16 +11,17 @@ async function getcontent() {
   }
 }
 
-async function getPopular() {
+getPopularMovie()
+
+async function getTopRated() {
   try {
-    const response = await fetch("http://localhost:4567/tv/popular")
+    const response = await fetch("http://localhost:4567/movie/top_rated")
     const popular = await response.json()
     console.log(popular)
-    ///////////////
+    showTopRated(popular)
   } catch (error) {
     console.log(error)
   }
 }
 
-getPopular()
-getcontent()
+getTopRated()
