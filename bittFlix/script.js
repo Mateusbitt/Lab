@@ -40,7 +40,7 @@ async function searchMovie() {
       `https://api.themoviedb.org/3/search/multi?region=BR&language=pt-BR&api_key=fc7d295c26d9108d9d70c770ee1064b7&query=${searchTerm}`
     );
     const data = await response.json();
-  
+    
     if (!data.results || !Array.isArray(data.results)) {
       console.log("Nenhum resultado encontrado.");
       return;
@@ -52,7 +52,7 @@ async function searchMovie() {
     }
   
     resultsContainer.classList.remove("hidden");
-    const topResults = data.results.slice(0, 6);
+    const topResults = data.results.slice(0, 25);
     showSearchResults(topResults);
   } catch (error) {
     console.log(error);
@@ -67,7 +67,7 @@ function showSearchResults(results) {
     const card = document.createElement("div")
     card.classList.add("result-card")
     card.innerHTML = `
-        <p>${item.title || item.name}</p>
+      <a href="pages/detailPage/detailPage.html?movieId=${item.id}">${item.title || item.name}</a>
       `
     resultsContainer.appendChild(card)
   })

@@ -151,6 +151,11 @@ body {
 .result-card {
   margin: 10px 0px;
 }
+
+.result-card a {
+  text-decoration: none;
+  color: var(--color-white);
+}
 /* MID */
 
 #tendencies, #mostSeen {
