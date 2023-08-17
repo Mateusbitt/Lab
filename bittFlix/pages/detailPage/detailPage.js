@@ -6,10 +6,17 @@ async function fetchMovieDetails() {
     const response = await fetch(`http://localhost:4567/movie/${movieId}`)
     const movieDetails = await response.json()
     showMovieDetails(movieDetails)
+    dynamicTitle(movieDetails)
     console.log(movieDetails)
   } catch (error) {
     console.log(error)
   }
+}
+
+function dynamicTitle(movie) {
+  const takeDynamicTitle = movie.title
+  const pageTitle = document.querySelector("title")
+  pageTitle.textContent = takeDynamicTitle
 }
 
 function takeGenres(movie) {
