@@ -24,10 +24,12 @@ function showMovieDetails(movie) {
       <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="">
     </div>
     <div id="rightSide">
-      <h1 >${movie.original_title}</h1>
+      <h1>${movie.title}</h1>
+      <h3>${movie.tagline}</h3>
       <p>${movie.overview}</p>
+      <p>Lançamento: ${movie.release_date}</p>
       <p>Gênero: ${takeGenres(movie)}</p>
-      <p>Nota: ${movie.vote_average}</p>
+      <p id="note">Nota: ${movie.vote_average}</p>
     </div>
   `;
 }

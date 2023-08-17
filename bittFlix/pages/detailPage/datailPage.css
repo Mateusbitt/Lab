@@ -121,6 +121,25 @@ body {
   width: 70%;
 }
 
+#rightSide h1 {
+  margin: 40px 0px 10px 0px;
+}
+
+#rightSide h3 {
+  font-size: 1rem;
+}
+
+#rightSide p {
+  margin: 40px auto;
+}
+
+#note{
+  width: 80px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-navbar);
+}
+
 /* footer */
 
 #footerContainer {
