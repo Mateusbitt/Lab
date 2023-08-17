@@ -61,9 +61,10 @@
             id="searchInput"
             placeholder="Buscar por um Filme, Série ou Pessoa..."
             type="text"
+            oninput="searchMovie()"
           />
-          <button onclick="funfando()" id="searchButton">Buscar</button>
         </div>
+        <div id="resultsContainer" class="hidden"></div>
       </div>
       <div id="tendencies">Tendências</div>
       <div id="movieContainer">Uma lista de filmes</div>

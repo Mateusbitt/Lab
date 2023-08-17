@@ -26,6 +26,49 @@ function closeSidebar() {
   }
 }
 
-function funfando() {
-  console.log("Sa porra ta on")
+async function searchMovie() {
+  const searchTerm = document.getElementById("searchInput").value
+  const resultsContainer = document.getElementById("resultsContainer")
+
+  if (searchTerm.length === 0) {
+    resultsContainer.classList.add("hidden")
+    return
+  }
+
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/search/multi?region=BR&language=pt-BR&api_key=fc7d295c26d9108d9d70c770ee1064b7&query=${searchTerm}`
+    );
+    const data = await response.json();
+  
+    if (!data.results || !Array.isArray(data.results)) {
+      console.log("Nenhum resultado encontrado.");
+      return;
+    }
+  
+    if (data.results.length === 0) {
+      resultsContainer.innerHTML = "<p>Sem resultados</p>";
+      return;
+    }
+  
+    resultsContainer.classList.remove("hidden");
+    const topResults = data.results.slice(0, 6);
+    showSearchResults(topResults);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function showSearchResults(results) {
+  const resultsContainer = document.getElementById("resultsContainer")
+  resultsContainer.innerHTML = ""
+
+  results.forEach((item) => {
+    const card = document.createElement("div")
+    card.classList.add("result-card")
+    card.innerHTML = `
+        <p>${item.title || item.name}</p>
+      `
+    resultsContainer.appendChild(card)
+  })
 }
